@@ -3,5 +3,5 @@ output "sns_subscription_arn" {
 }
 
 output "sns_topic_arn" {
-  value = { for k, v in data.aws_sns_topic.alarm_topics : k => v.arn}
+  value = { for k, v in data.aws_sns_topic.alarm_topics : k => v.arn }
 }
