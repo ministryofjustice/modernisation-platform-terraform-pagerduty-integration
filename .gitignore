@@ -9,3 +9,6 @@ env/
 *.sha256
 terraform.tfstate
 .idea
+.terraform.lock.hcl
+test/unit-test/.terraform.*
+test/unit-test/terraform.*
