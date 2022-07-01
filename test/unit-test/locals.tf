@@ -8,9 +8,14 @@ data "aws_secretsmanager_secret_version" "pagerduty_integration_keys" {
   secret_id = data.aws_secretsmanager_secret.pagerduty_integration_keys.id
 }
 
+data "aws_ssm_parameter" "environment_management_arn" {
+  provider = aws.testing-ci-user
+  name     = "environment_management_arn"
+}
+
 data "aws_secretsmanager_secret" "environment_management" {
   provider = aws.testing-ci-user
-  name     = "environment_management"
+  arn      = data.aws_ssm_parameter.environment_management_arn.value
 }
 
 # Get latest secret value with ID from above. This secret stores account IDs for the Modernisation Platform sub-accounts
