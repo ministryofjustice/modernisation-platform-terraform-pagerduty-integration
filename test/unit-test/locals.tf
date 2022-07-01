@@ -1,6 +1,6 @@
 data "aws_secretsmanager_secret" "pagerduty_integration_keys" {
   provider = aws.testing-ci-user
-  arn     = format("arn:aws:secretsmanager:eu-west-2:%s:secret:pagerduty_integration_keys-26WzqG", local.environment_management["modernisation_platform_account_id"])
+  arn      = format("arn:aws:secretsmanager:eu-west-2:%s:secret:pagerduty_integration_keys-26WzqG", local.environment_management["modernisation_platform_account_id"])
 }
 
 data "aws_secretsmanager_secret_version" "pagerduty_integration_keys" {
