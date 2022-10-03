@@ -1,5 +1,6 @@
 # Modernisation Platform Pagerduty Integration Terraform Module
-[![repo standards badge](https://img.shields.io/badge/dynamic/json?color=blue&style=for-the-badge&logo=github&label=MoJ%20Compliant&query=%24.data%5B%3F%28%40.name%20%3D%3D%20%22modernisation-platform-terraform-pagerduty-integration%22%29%5D.status&url=https%3A%2F%2Foperations-engineering-reports.cloud-platform.service.justice.gov.uk%2Fgithub_repositories)](https://operations-engineering-reports.cloud-platform.service.justice.gov.uk/github_repositories#modernisation-platform-terraform-pagerduty-integration "Link to report")
+
+[![repo standards badge](https://img.shields.io/badge/dynamic/json?color=blue&style=for-the-badge&logo=github&label=MoJ%20Compliant&query=%24.result&url=https%3A%2F%2Foperations-engineering-reports.cloud-platform.service.justice.gov.uk%2Fapi%2Fv1%2Fcompliant_public_repositories%2Fmodernisation-platform-terraform-pagerduty-integration)](https://operations-engineering-reports.cloud-platform.service.justice.gov.uk/public-github-repositories.html#modernisation-platform-terraform-pagerduty-integration "Link to report")
 
 Terraform module for associating SNS topics with PagerDuty services on the Modernisation Platform.
 
@@ -32,23 +33,25 @@ module "pagerduty_core_alerts" {
 ```
 
 ### Adding new PagerDuty sevices
+
 New Pagerduty services can be added here - https://github.com/ministryofjustice/modernisation-platform/blob/main/terraform/pagerduty/services.tf
 
 Once added the integration key should be added to the secret here - https://github.com/ministryofjustice/modernisation-platform/blob/main/terraform/pagerduty/aws.tf#L12
 
 <!--- BEGIN_TF_DOCS --->
+
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.0 |
+| Name                                                                     | Version  |
+| ------------------------------------------------------------------------ | -------- |
+| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 1.0.1 |
+| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | ~> 4.0   |
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 4.0 |
+| Name                                             | Version |
+| ------------------------------------------------ | ------- |
+| <a name="provider_aws"></a> [aws](#provider_aws) | ~> 4.0  |
 
 ## Modules
 
@@ -56,17 +59,17 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_sns_topic_subscription.pagerduty_subscription](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_subscription) | resource |
-| [aws_sns_topic.alarm_topics](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/sns_topic) | data source |
+| Name                                                                                                                                                    | Type        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [aws_sns_topic_subscription.pagerduty_subscription](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_subscription) | resource    |
+| [aws_sns_topic.alarm_topics](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/sns_topic)                                  | data source |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_pagerduty_integration_key"></a> [pagerduty\_integration\_key](#input\_pagerduty\_integration\_key) | n/a | `string` | n/a | yes |
-| <a name="input_sns_topics"></a> [sns\_topics](#input\_sns\_topics) | n/a | `list(any)` | n/a | yes |
+| Name                                                                                                         | Description | Type        | Default | Required |
+| ------------------------------------------------------------------------------------------------------------ | ----------- | ----------- | ------- | :------: |
+| <a name="input_pagerduty_integration_key"></a> [pagerduty_integration_key](#input_pagerduty_integration_key) | n/a         | `string`    | n/a     |   yes    |
+| <a name="input_sns_topics"></a> [sns_topics](#input_sns_topics)                                              | n/a         | `list(any)` | n/a     |   yes    |
 
 ## Outputs
 
@@ -75,6 +78,7 @@ No outputs.
 <!--- END_TF_DOCS --->
 
 ## Looking for issues?
+
 If you're looking to raise an issue with this module, please create a new issue in the [Modernisation Platform repository](https://github.com/ministryofjustice/modernisation-platform/issues).
 
 <!-- BEGIN_TF_DOCS -->
