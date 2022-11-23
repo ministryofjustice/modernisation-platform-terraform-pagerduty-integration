@@ -14,7 +14,7 @@ Upon successful run, you should see an output similar to the below
 
 ```
 TestSNSCreation 2022-07-01T11:34:12+01:00 logger.go:66: Destroy complete! Resources: 2 destroyed.
-TestSNSCreation 2022-07-01T11:34:12+01:00 logger.go:66: 
+TestSNSCreation 2022-07-01T11:34:12+01:00 logger.go:66:
 PASS
 ok  	pagerduty_integration_test.go	74.301s
 
