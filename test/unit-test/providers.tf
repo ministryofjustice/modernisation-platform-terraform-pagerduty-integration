@@ -8,5 +8,4 @@ provider "aws" {
 provider "aws" {
   alias                  = "testing-ci-user"
   region                 = "eu-west-2"
-  skip_get_ec2_platforms = true
 }
