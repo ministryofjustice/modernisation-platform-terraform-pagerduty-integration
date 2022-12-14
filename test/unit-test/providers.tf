@@ -6,6 +6,6 @@ provider "aws" {
 }
 
 provider "aws" {
-  alias                  = "testing-ci-user"
-  region                 = "eu-west-2"
+  alias  = "testing-ci-user"
+  region = "eu-west-2"
 }
