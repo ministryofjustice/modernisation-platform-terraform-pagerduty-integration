@@ -30,7 +30,6 @@ go mod download
 go test -v
 ```
 
-
 Upon successful run, you should see an output similar to the below
 
 ```
