@@ -1,14 +1,35 @@
-# How to run the tests
+# Terratest Unit Tests
 
-Run the tests from within the `test` directory
+## Initialisation
+
+On first set up of a new repository, run:
 
 ```
-cd ../
-go mod init github.com/ministryofjustice/modernisation-platform-terraform-pagerduty-integration
+go mod init github.com/ministryofjustice/<repo-name>
+```
+
+Then run:
+
+```
 go mod tidy
-go mod download
-aws-vault exec mod -- go test -v
 ```
+
+# How to run the tests locally
+
+Run the tests from within the `test` directory using the `testing-test` user credentials.
+
+Get the credentials from https://moj.awsapps.com selecting the testing-test AWS account.
+
+Copy the credentials and export them by pasting them into the terminal from which you will run the tests.
+
+Next go into the testing folder and run the tests.
+
+```
+cd test
+go mod download
+go test -v
+```
+
 
 Upon successful run, you should see an output similar to the below
 
