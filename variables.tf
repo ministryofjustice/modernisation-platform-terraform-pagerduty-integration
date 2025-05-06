@@ -1,7 +1,4 @@
-variable "sns_topics" {
-  type = list(any)
-}
-
-variable "pagerduty_integration_key" {
-  type = string
+variable "pagerduty_integration_keys" {
+  type = map(string)
+  description = "Map of SNS topic names to their corresponding PagerDuty integration keys"
 }
