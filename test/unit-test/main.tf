@@ -5,6 +5,7 @@ module "test_alerts" {
   depends_on                = [aws_sns_topic.test_alarms]
 }
 
+#trivy:ignore:AVD-AWS-0095
 resource "aws_sns_topic" "test_alarms" {
   #checkov:skip=CKV_AWS_26:"encrypted topics do not work with pagerduty subscription"
   name = "test_alarms"
