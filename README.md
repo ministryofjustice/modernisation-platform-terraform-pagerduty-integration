@@ -36,9 +36,9 @@ module "pagerduty_core_alerts" {
 
 ### Adding New PagerDuty Services
 
-New Pagerduty services can be added here - https://github.com/ministryofjustice/modernisation-platform/blob/main/terraform/pagerduty/services.tf
+New Pagerduty services can be added here - <https://github.com/ministryofjustice/modernisation-platform/blob/main/terraform/pagerduty/services.tf>
 
-Once added, the integration key should be added to the secret here - https://github.com/ministryofjustice/modernisation-platform/blob/main/terraform/pagerduty/aws.tf#L12
+Once added, the integration key should be added to the secret here - <https://github.com/ministryofjustice/modernisation-platform/blob/main/terraform/pagerduty/aws.tf#L12>
 
 <!--- BEGIN_TF_DOCS --->
 
