@@ -13,3 +13,4 @@ terraform.tfstate.backup
 .terraform.lock.hcl
 test/unit-test/.terraform.*
 test/unit-test/terraform.*
+megalinter-reports
