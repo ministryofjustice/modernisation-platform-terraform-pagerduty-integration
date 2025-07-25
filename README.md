@@ -10,7 +10,7 @@ Terraform module for associating SNS topics with PagerDuty services on the Moder
 
 ```hcl
 
-# Get the map of pagerduty integration keys from the modernisation platform account
+# Get the map of PagerDuty integration keys from the modernisation platform account
 data "aws_secretsmanager_secret" "pagerduty_integration_keys" {
   provider = aws.modernisation-platform
   name     = "pagerduty_integration_keys"
@@ -27,18 +27,18 @@ locals {
 }
 
 module "pagerduty_core_alerts" {
-  source                    = "github.com/ministryofjustice/modernisation-platform-terraform-pagerduty-integration?ref=0179859e6fafc567843cd55c0b05d325d5012dc4" # v2.0.0
+  source                    = "github.com/ministryofjustice/modernisation-platform-terraform-pagerduty-integration?ref=d88bd90d490268896670a898edfaba24bba2f8ab" # v3.0.0
   sns_topics                = ["config", "securityhub-alarms", "cloudtrail"]
   pagerduty_integration_key = local.pagerduty_integration_keys["core_alerts_cloudwatch"]
 }
 
 ```
 
-### Adding new PagerDuty sevices
+### Adding New PagerDuty Services
 
-New Pagerduty services can be added here - https://github.com/ministryofjustice/modernisation-platform/blob/main/terraform/pagerduty/services.tf
+New Pagerduty services can be added here - <https://github.com/ministryofjustice/modernisation-platform/blob/main/terraform/pagerduty/services.tf>
 
-Once added the integration key should be added to the secret here - https://github.com/ministryofjustice/modernisation-platform/blob/main/terraform/pagerduty/aws.tf#L12
+Once added, the integration key should be added to the secret here - <https://github.com/ministryofjustice/modernisation-platform/blob/main/terraform/pagerduty/aws.tf#L12>
 
 <!--- BEGIN_TF_DOCS --->
 
@@ -47,13 +47,13 @@ Once added the integration key should be added to the secret here - https://gith
 | Name                                                                     | Version  |
 | ------------------------------------------------------------------------ | -------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 1.0.1 |
-| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | ~> 5.0   |
+| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | ~> 6.0   |
 
 ## Providers
 
 | Name                                             | Version |
 | ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | ~> 5.0  |
+| <a name="provider_aws"></a> [aws](#provider_aws) | ~> 6.0  |
 
 ## Modules
 
