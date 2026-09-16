@@ -18,7 +18,7 @@ go mod tidy
 
 Run the tests from within the `test` directory using the `testing-test` user credentials.
 
-Get the credentials from https://moj.awsapps.com selecting the testing-test AWS account.
+Get the credentials from <https://moj.awsapps.com> selecting the testing-test AWS account.
 
 Copy the credentials and export them by pasting them into the terminal from which you will run the tests.
 
@@ -36,11 +36,11 @@ Upon successful run, you should see an output similar to the below
 TestSNSCreation 2022-07-01T11:34:12+01:00 logger.go:66: Destroy complete! Resources: 2 destroyed.
 TestSNSCreation 2022-07-01T11:34:12+01:00 logger.go:66:
 PASS
-ok  	pagerduty_integration_test.go	74.301s
+ok   pagerduty_integration_test.go 74.301s
 
 ```
 
 ## References
 
-1. https://terratest.gruntwork.io/docs/getting-started/quick-start/
-2. https://github.com/ministryofjustice/modernisation-platform-terraform-pagerduty-integration/blob/main/.github/workflows/go-terratest.yml
+1. <https://terratest.gruntwork.io/docs/getting-started/quick-start/>
+2. <https://github.com/ministryofjustice/modernisation-platform-terraform-pagerduty-integration/blob/main/.github/workflows/go-terratest.yml>
