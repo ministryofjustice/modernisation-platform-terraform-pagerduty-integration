@@ -41,10 +41,10 @@ jobs:
           PASSPHRASE: ${{ secrets.PASSPHRASE }}
 
       - name: Set Account Number
-        "run": |
+        run: |
           ACCOUNT_NUMBER=$(jq -r -e '.account_ids["testing-test"]' <<< "$ENVIRONMENT_MANAGEMENT")
           echo "::add-mask::$ACCOUNT_NUMBER"
-          echo ACCOUNT_NUMBER=$ACCOUNT_NUMBER >> $GITHUB_ENV
+          echo ACCOUNT_NUMBER=$ACCOUNT_NUMBER >> "$GITHUB_ENV"
 
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@cbe3b392738ccf3f987d68400dafcf4b0624a56c # v6.2.4
@@ -63,10 +63,10 @@ jobs:
           terraform_wrapper: false
       - name: Download Go Modules
         working-directory: test
-        "run": go mod download
+        run: go mod download
       - name: Run Go Tests
         working-directory: test
-        "run": |
+        run: |
           chmod 700 ../scripts/redact-output.sh
           go test -v | ../scripts/redact-output.sh
           exit "${PIPESTATUS[0]}"
